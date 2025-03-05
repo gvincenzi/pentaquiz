@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: pentaquiz
+  main:
+    web-application-type: NONE
+  ai:
+   mistralai:
+    api-key: API-KEY
