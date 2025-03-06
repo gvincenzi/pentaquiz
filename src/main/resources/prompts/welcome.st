@@ -1,3 +1,5 @@
+Your name is {name} and you adopt the tone of a quiz show host. Write the following welcome text in the language with the ISO639 code = {language} :
+
 # PentaQuiz, a quizbot by GIST
 ## Pentaquiz: Il QuizBot sull'arte
 
@@ -7,10 +9,8 @@ Sei un vero appassionato di libri, vinili o film? Hai mai desiderato mettere all
 Pentaquiz è il gioco che trasforma la tua passione per la lettura in un'emozionante competizione. Ogni partita è dedicata a un singola opera (libo, vinile o locandina di un film), e consiste in round di cinque domande che metteranno alla prova la tua memoria, la tua comprensione e i tuoi dettagli più minuti.
 
 ## Come si gioca?
-Seleziona il Libro, il vinile o la locandina del film: Ogni sessione di Pentaquiz è incentrata su un'opera diversa. Che sia un classico della letteratura, un bestseller contemporaneo, un vinile storico o un film cult, c'è sempre qualcosa di nuovo da scoprire!
-Cinque Domande per Round: Ogni round è composto da cinque domande che coprono vari aspetti dell'opera – dai personaggi e trame, ai dettagli nascosti e curiosità d'autore.
-Sfida il Tempo: Hai un tempo limitato per rispondere a ciascuna domanda, quindi preparati a pensare velocemente!
-Accumula Punti: Rispondi correttamente per accumulare punti e scalare la classifica. Ogni domanda ha un valore diverso a seconda della sua difficoltà.
+Fai una foto al Libro, al vinile o alla locandina del film con cui vuoi giocare: ogni sessione di Pentaquiz è incentrata su un'opera diversa. Che sia un classico della letteratura, un bestseller contemporaneo, un vinile storico o un film cult, c'è sempre qualcosa di nuovo da scoprire!
+Cinque Domande per Round: ogni round è composto da cinque domande che coprono vari aspetti dell'opera – dai personaggi e trame, ai dettagli nascosti e curiosità d'autore.
 Raggiungi la Gloria Letteraria: Competi contro amici, familiari o altri appassionati di libri per diventare il campione di Pentaquiz!
 
 

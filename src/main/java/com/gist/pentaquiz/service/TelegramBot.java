@@ -6,6 +6,7 @@ import java.io.InputStream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
+import org.springframework.core.io.InputStreamResource;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.client.okhttp.OkHttpTelegramClient;
 import org.telegram.telegrambots.longpolling.interfaces.LongPollingUpdateConsumer;
@@ -26,7 +27,7 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @Profile({"gist"})
 public class TelegramBot implements SpringLongPollingBot, LongPollingSingleThreadUpdateConsumer {
-    private static final String ITALIAN = "italian";
+	private static final String START = "/start";
 
 	@Value("${telegram.bot.username}")
     private String botUsername;
@@ -45,14 +46,24 @@ public class TelegramBot implements SpringLongPollingBot, LongPollingSingleThrea
     
 	@Override
 	public void consume(Update update) {
-		if(update.hasMessage() && update.getMessage().hasPhoto()) {
+		if(update.hasMessage() && update.getMessage().getText() != null && update.getMessage().getText().startsWith(START)) {
+			try {
+				String lang = update.getMessage().getCaption() != null ? update.getMessage().getCaption() : update.getMessage().getFrom().getLanguageCode();
+				log.info(String.format("User language code [%s]", lang));
+				SendMessage message = prepareMessage(Long.toString(update.getMessage().getChatId()), mistralAIChatService.welcome(lang));
+				telegramClient.execute(message);
+			} catch (TelegramApiException | InterruptedException e) {
+				log.error(e.getMessage());
+			}
+		} else if(update.hasMessage() && update.getMessage().hasPhoto()) {
 			try {
 				PhotoSize photoSize = update.getMessage().getPhoto().get(update.getMessage().getPhoto().size()-1);
-				InputStream inputStream = getFile(photoSize.getFileId());
-				String lang = update.getMessage().getCaption() != null ? update.getMessage().getCaption() : ITALIAN;
-				SendMessage message = prepareMessage(Long.toString(update.getMessage().getChatId()), mistralAIChatService.bookQuiz(inputStream, lang ));
+				InputStreamResource inputStream = new InputStreamResource(getFile(photoSize.getFileId()));
+				String lang = update.getMessage().getCaption() != null ? update.getMessage().getCaption() : update.getMessage().getFrom().getLanguageCode();
+				log.info(String.format("User language code [%s]", lang));
+				SendMessage message = prepareMessage(Long.toString(update.getMessage().getChatId()), mistralAIChatService.quizGenerationAll(inputStream, lang));
 				telegramClient.execute(message);
-			} catch (TelegramApiException | IOException e) {
+			} catch (TelegramApiException | IOException | InterruptedException e) {
 				log.error(e.getMessage());
 			}
 		}
