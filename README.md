@@ -1,7 +1,12 @@
-# PentaQuiz, a quizbot by GIST
+# PentaQuiz, a quizbot by [GIST](https://github.com/gvincenzi/gist)
 ## Pentaquiz: Il QuizBot sull'arte
 
+<img src="gist.png" width="200">
+
 Sei un vero appassionato di libri, vinili o film? Hai mai desiderato mettere alla prova la tua conoscenza su un'opera specifica? Allora preparati per una sfida avvincente con Pentaquiz!
+
+ 
+[Per giocare basta andare sul bot telegram](https://t.me/pentaquiz_bot) e iniziare la conversazione con uno **/start**
 
 ## Cosa è Pentaquiz?
 Pentaquiz è il gioco che trasforma la tua passione per la lettura in un'emozionante competizione. Ogni partita è dedicata a un singola opera (libo, vinile o locandina di un film), e consiste in round di cinque domande che metteranno alla prova la tua memoria, la tua comprensione e i tuoi dettagli più minuti.
@@ -22,3 +27,9 @@ Raggiungi la Gloria Letteraria: Competi contro amici, familiari o altri appassio
 Preparati a immergerti nel mondo della letteratura, della musica e del cinema come mai prima d'ora. Pentaquiz ti aspetta per una sfida che metterà alla prova la tua mente e il tuo amore per l'arte. Sei pronto a diventare un maestro del quiz artistico?
 
 Inizia la tua avventura con Pentaquiz oggi stesso!
+
+## Contribuire
+I contributi sono benvenuti! Si prega di forkare il repository e inviare una richiesta di pull con le modifiche.
+
+## Licenza
+Questo progetto è concesso in licenza con la licenza MIT. Consultare il file LICENSE per maggiori dettagli.
