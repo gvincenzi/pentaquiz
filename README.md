@@ -32,4 +32,4 @@ Inizia la tua avventura con Pentaquiz oggi stesso!
 I contributi sono benvenuti! Si prega di forkare il repository e inviare una richiesta di pull con le modifiche.
 
 ## Licenza
-Questo progetto è concesso in licenza con la licenza MIT. Consultare il file LICENSE per maggiori dettagli.
+Questo progetto è concesso in licenza con la licenza Apache. Consultare il file LICENSE per maggiori dettagli.
